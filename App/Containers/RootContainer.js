@@ -9,6 +9,7 @@ import ReduxPersist from '../Config/ReduxPersist'
 
 // Styles
 import styles from './Styles/RootContainerStyle'
+import { Metrics, Colors, Fonts } from '../Themes/'
 
 class RootContainer extends Component {
   componentDidMount () {

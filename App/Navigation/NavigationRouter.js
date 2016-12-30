@@ -3,7 +3,8 @@
 import React, { Component } from 'react'
 import {AppRegistry, Navigator, StyleSheet, Text, View} from 'react-native'
 import { Scene, Router,  Actions } from 'react-native-router-flux'
-import Styles from './Styles/NavigationContainerStyle'
+import Styles from './Styles/TabBarStyle'
+import { Metrics, Colors, Fonts } from '../Themes/'
 import NavigationDrawer from './NavigationDrawer'
 import NavItems from './NavItems'
 import CustomNavBar from '../Navigation/CustomNavBar'
@@ -29,7 +30,16 @@ import DeviceInfoScreen from '../Containers/DeviceInfoScreen'
 class TabIcon extends React.Component {
     render(){
         return (
-            <Text style={{textAlign: 'center', color: this.props.selected ? 'red' :'black'}}>{this.props.title}</Text>
+
+            <Text
+                //should eventually be relocated into its own TabBar Style
+                style={{
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  color: this.props.selected ? Colors.helioRedSecondary : 'white',
+                }}
+             >{this.props.title}
+            </Text>
         );
     }
 }
@@ -38,7 +48,7 @@ class NavigationRouter extends Component {
   render () {
     return (
       <Router>
-        <Scene key='tabbar' tabs={true} >
+        <Scene key='tabbar' tabs={true} hideNavBar tabBarStyle={Styles.tabBarStyle}>
           <Scene initial key='presentationScreen' icon={TabIcon} component={PresentationScreen} title='Helio Health Group' rightTitle='Log In' onRight={() => window.alert('Example Pressed')} />
             <Scene key='login' icon={TabIcon} component={LoginScreen} title='Login' hideNavBar />
           <Scene key='componentExamples' icon={TabIcon} component={AllComponentsScreen} title='Components' />
