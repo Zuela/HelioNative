@@ -9,7 +9,7 @@ const metrics = {
   marginHorizontal: 10,
   marginVertical: 10,
   section: 25,
-  baseMargin: 10,
+  baseMargin: 5,
   doubleBaseMargin: 20,
   smallMargin: 5,
   horizontalLineHeight: 1,
@@ -17,6 +17,7 @@ const metrics = {
   screenWidth: width < height ? width : height,
   screenHeight: width < height ? height : width,
   navBarHeight: (Platform.OS === 'ios') ? 64 : 54,
+  tabBarHeight: (Platform.OS === 'ios') ? 64 : 54,
   buttonRadius: 4,
   icons: {
     tiny: 15,

@@ -19,8 +19,8 @@ export default StyleSheet.create({
     margin: Metrics.baseMargin
   },
   myImage: {
-    width: 200,
-    height: 200,
+    width: 250,
+    height: 250,
     alignSelf: 'center'
   }
 })

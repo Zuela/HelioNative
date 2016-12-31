@@ -12,6 +12,7 @@ const ApplicationStyles = {
     mainContainer: {
       flex: 1,
       marginTop: Metrics.navBarHeight,
+      marginBottom: Metrics.tabBarHeight,
       backgroundColor: Colors.transparent
     },
     backgroundImage: {
@@ -47,7 +48,7 @@ const ApplicationStyles = {
     }
   },
   darkLabelContainer: {
-    backgroundColor: Colors.cloud,
+    backgroundColor: Colors.helioGrey,
     padding: Metrics.smallMargin
   },
   darkLabel: {
@@ -62,7 +63,7 @@ const ApplicationStyles = {
   },
   sectionTitle: {
     ...Fonts.style.h4,
-    color: Colors.coal,
+    color: Colors.helioBlackSecondary,
     backgroundColor: Colors.ricePaper,
     padding: Metrics.smallMargin,
     marginTop: Metrics.smallMargin,
