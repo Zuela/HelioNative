@@ -1,13 +1,14 @@
 // @flow
 
 import React, { Component } from 'react'
-import {AppRegistry, Navigator, StyleSheet, Text, View} from 'react-native'
-import { Scene, Router,  Actions } from 'react-native-router-flux'
+import { AppRegistry, Navigator, StyleSheet, Text, View} from 'react-native'
+import { Scene, Router, Actions } from 'react-native-router-flux'
 import Styles from './Styles/TabBarStyle'
 import { Metrics, Colors, Fonts } from '../Themes/'
 import NavigationDrawer from './NavigationDrawer'
 import NavItems from './NavItems'
 import CustomNavBar from '../Navigation/CustomNavBar'
+import { Images } from '../Themes'
 
 // screens identified by the router
 import PresentationScreen from '../Containers/PresentationScreen'
@@ -22,6 +23,7 @@ import MapviewExample from '../Containers/MapviewExample'
 import APITestingScreen from '../Containers/APITestingScreen'
 import ThemeScreen from '../Containers/ThemeScreen'
 import DeviceInfoScreen from '../Containers/DeviceInfoScreen'
+import Helio1 from '../Containers/Helio1'
 
 /* **************************
 * Documentation: https://github.com/aksonov/react-native-router-flux
@@ -49,8 +51,16 @@ class NavigationRouter extends Component {
     return (
       <Router>
         <Scene key='tabbar' tabBarStyle={Styles.tabBarStyle} tabs={true} hideNavBar >
-          <Scene initial key='presentationScreen' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} rightButtonTextStyle={Styles.rightButtonText} rightButtonStyle={Styles.rightButton} icon={TabIcon} component={PresentationScreen} title='Helio Health Group' rightTitle='Log In' onRight={() => window.alert('Example Pressed')} />
-            <Scene key='login' icon={TabIcon} component={LoginScreen} title='Login' hideNavBar />
+          <Scene key='login' component={LoginScreen} title='Login' hideNavBar />
+          <Scene initial key='presentationScreen'
+            navigationBarStyle={Styles.navBar}
+            title='Helio Health Group' titleStyle={Styles.title}
+            rightTitle='Log In' rightButtonTextStyle={Styles.rightButtonText} rightButtonStyle={Styles.rightButton} onRight={() => Actions.login()}
+            leftButtonImage={Images.helioSymbolRed} leftButtonStyle={Styles.leftButton} leftButtonTextStyle={Styles.leftButtonText} onLeft={() => window.alert('Example Pressed')}
+            icon={TabIcon}
+            component={PresentationScreen}
+          />
+          <Scene key='Helio1' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={Helio1} title='HelioWIP' />
           <Scene key='componentExamples' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={AllComponentsScreen} title='Components' />
           <Scene key='usageExamples' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={UsageExamplesScreen} title='Usage' rightTitle='Example' onRight={() => window.alert('Example Pressed')} />
             <Scene key='listviewExample' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} component={ListviewExample} title='Listview Example' />

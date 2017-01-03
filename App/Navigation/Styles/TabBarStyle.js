@@ -17,12 +17,8 @@ export default StyleSheet.create({
           color: Colors.snow
         },
         leftButtonText: {
-          color: Colors.snow,
-          textAlign: 'center',
-          textAlignVertical: 'center'
         },
         leftButton: {
-          tintColor: Colors.snow
         },
         rightButtonText: {
           color: Colors.snow,

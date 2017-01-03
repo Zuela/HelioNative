@@ -11,6 +11,7 @@ export default StyleSheet.create({
   form: {
     backgroundColor: Colors.snow,
     margin: Metrics.baseMargin,
+    paddingVertical: 10,
     borderRadius: 4
   },
   row: {
@@ -50,7 +51,8 @@ export default StyleSheet.create({
   topLogo: {
     alignSelf: 'center',
     resizeMode: 'contain',
-    width: 250,
-    height: 250
+    width: 200,
+    height: 200,
+    marginVertical: 60
   }
 })
