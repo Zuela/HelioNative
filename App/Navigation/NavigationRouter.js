@@ -48,21 +48,21 @@ class NavigationRouter extends Component {
   render () {
     return (
       <Router>
-        <Scene key='tabbar' tabs={true} hideNavBar tabBarStyle={Styles.tabBarStyle}>
-          <Scene initial key='presentationScreen' icon={TabIcon} component={PresentationScreen} title='Helio Health Group' rightTitle='Log In' onRight={() => window.alert('Example Pressed')} />
+        <Scene key='tabbar' tabBarStyle={Styles.tabBarStyle} tabs={true} hideNavBar >
+          <Scene initial key='presentationScreen' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={PresentationScreen} title='Helio Health Group' rightTitle='Log In' onRight={() => window.alert('Example Pressed')} />
             <Scene key='login' icon={TabIcon} component={LoginScreen} title='Login' hideNavBar />
-          <Scene key='componentExamples' icon={TabIcon} component={AllComponentsScreen} title='Components' />
-          <Scene key='usageExamples' icon={TabIcon} component={UsageExamplesScreen} title='Usage' rightTitle='Example' onRight={() => window.alert('Example Pressed')} />
-            <Scene key='listviewExample' component={ListviewExample} title='Listview Example' />
-            <Scene key='listviewGridExample' component={ListviewGridExample} title='Listview Grid' />
-            <Scene key='listviewSectionsExample' component={ListviewSectionsExample} title='Listview Sections' />
-            <Scene key='listviewSearchingExample' component={ListviewSearchingExample} title='Listview Searching' navBar={CustomNavBar} />
-            <Scene key='mapviewExample' component={MapviewExample} title='Mapview Example' />
-          <Scene key='apiTesting' icon={TabIcon} component={APITestingScreen} title='API Testing' />
-          <Scene key='theme' icon={TabIcon} component={ThemeScreen} title='Theme' />
+          <Scene key='componentExamples' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={AllComponentsScreen} title='Components' />
+          <Scene key='usageExamples' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={UsageExamplesScreen} title='Usage' rightTitle='Example' onRight={() => window.alert('Example Pressed')} />
+            <Scene key='listviewExample' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} component={ListviewExample} title='Listview Example' />
+            <Scene key='listviewGridExample' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} component={ListviewGridExample} title='Listview Grid' />
+            <Scene key='listviewSectionsExample' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} component={ListviewSectionsExample} title='Listview Sections' />
+            <Scene key='listviewSearchingExample' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} component={ListviewSearchingExample} title='Listview Searching' navBar={CustomNavBar} />
+            <Scene key='mapviewExample' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} component={MapviewExample} title='Mapview Example' />
+          <Scene key='apiTesting' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={APITestingScreen} title='API Testing' />
+          <Scene key='theme' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={ThemeScreen} title='Theme' />
 
-          {/* Custom navigation bar example */}
-          <Scene key='deviceInfo' icon={TabIcon} component={DeviceInfoScreen} title='Device Info' />
+        {/* Custom navigation bar example */}
+          <Scene key='deviceInfo' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={DeviceInfoScreen} title='Device Info' />
         </Scene>
       </Router>
     )
