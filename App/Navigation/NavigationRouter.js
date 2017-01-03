@@ -43,13 +43,13 @@ class TabIcon extends React.Component {
         );
     }
 }
-
+// styles {navigationBarStyle/titleStyle} could be written more eloquently...
 class NavigationRouter extends Component {
   render () {
     return (
       <Router>
         <Scene key='tabbar' tabBarStyle={Styles.tabBarStyle} tabs={true} hideNavBar >
-          <Scene initial key='presentationScreen' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={PresentationScreen} title='Helio Health Group' rightTitle='Log In' onRight={() => window.alert('Example Pressed')} />
+          <Scene initial key='presentationScreen' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} rightButtonTextStyle={Styles.rightButtonText} rightButtonStyle={Styles.rightButton} icon={TabIcon} component={PresentationScreen} title='Helio Health Group' rightTitle='Log In' onRight={() => window.alert('Example Pressed')} />
             <Scene key='login' icon={TabIcon} component={LoginScreen} title='Login' hideNavBar />
           <Scene key='componentExamples' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={AllComponentsScreen} title='Components' />
           <Scene key='usageExamples' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} icon={TabIcon} component={UsageExamplesScreen} title='Usage' rightTitle='Example' onRight={() => window.alert('Example Pressed')} />

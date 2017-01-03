@@ -3,7 +3,7 @@ import { Metrics, Colors, Fonts } from '../../Themes/'
 
 export default StyleSheet.create({
         tabBarStyle: {
-            borderTopWidth : .5,
+            borderTopWidth : 0,
             borderColor    : Colors.helioBlack,
             backgroundColor: Colors.helioBlack,
             opacity        : 1
@@ -23,8 +23,14 @@ export default StyleSheet.create({
         leftButton: {
           tintColor: Colors.snow
         },
+        rightButtonText: {
+          color: Colors.snow,
+          textAlign: 'center'
+        },
         rightButton: {
-          color: Colors.snow
+          backgroundColor: Colors.helioRedSecondary,
+          borderColor: Colors.helioRedSecondary,
+          borderRadius: 5
         },
         drawer: {
           backgroundColor: Colors.helioBlack
