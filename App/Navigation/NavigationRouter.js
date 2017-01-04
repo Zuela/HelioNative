@@ -56,7 +56,7 @@ class NavigationRouter extends Component {
             navigationBarStyle={Styles.navBar}
             title='Helio Health Group' titleStyle={Styles.title}
             rightTitle='Log In' rightButtonTextStyle={Styles.rightButtonText} rightButtonStyle={Styles.rightButton} onRight={() => Actions.login()}
-            leftButtonImage={Images.helioSymbolRed} leftButtonStyle={Styles.leftButton} leftButtonTextStyle={Styles.leftButtonText} onLeft={() => window.alert('Example Pressed')}
+            leftButtonImage={Images.helioSymbolRedSmall} leftButtonIconStyle={Styles.leftButtonIcon} leftButtonTextStyle={Styles.leftButtonText} onLeft={() => window.alert('Example Pressed')}
             icon={TabIcon}
             component={PresentationScreen}
           />

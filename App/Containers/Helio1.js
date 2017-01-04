@@ -69,8 +69,7 @@ export default class APITestingScreen extends React.Component {
 
           <View style={styles.section}>
             <Text style={styles.sectionText}>
-              Testing API with Postman or APIary.io verifies the server works.
-              The API Test screen is the next step; a simple in-app way to verify and debug your in-app API functions.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Text>
             <Text style={styles.sectionText}>
               Create new endpoints in Services/Api.js then add example uses to endpoints array in Containers/APITestingScreen.js

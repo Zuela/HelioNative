@@ -18,7 +18,12 @@ export default StyleSheet.create({
         },
         leftButtonText: {
         },
-        leftButton: {
+        leftButtonIcon: {
+          flex: 1,
+          flexDirection: 'column',
+          height: 20,
+          width: 20,
+          resizeMode: 'contain',
         },
         rightButtonText: {
           color: Colors.snow,
@@ -26,8 +31,14 @@ export default StyleSheet.create({
           textAlignVertical: 'center'
         },
         rightButton: {
+          top: 20,
+          right: 0,
+          borderRadius: 0,
+          borderRightWidth: 2,
+          borderBottomWidth: 2,
+          height: Metrics.navBarHeight - 21,
           backgroundColor: Colors.helioRedSecondary,
           borderColor: Colors.helioRedSecondary,
-          borderRadius: 5
+          justifyContent: 'center',
         }
     });
