@@ -2,24 +2,23 @@ import {StyleSheet} from 'react-native'
 import { Metrics, Colors, Fonts } from '../../Themes/'
 
 export default StyleSheet.create({
-        tabBarStyle: {
-            borderColor    : Colors.helioBlack,
-            backgroundColor: Colors.helioBlack,
-            opacity        : 1
-        },
-        tabIconStyle: {
-
-        },
         navBar: {
           backgroundColor: Colors.helioBlack,
         },
         title: {
           color: Colors.snow
         },
+        tabBarStyle: {
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderColor: Colors.helioBlack,
+            backgroundColor: Colors.helioBlack,
+            opacity: 1,
+        },
         leftButtonText: {
         },
         leftButtonIcon: {
-          flex: 1,
+          flex : 1,
           flexDirection: 'column',
           height: 20,
           width: 20,
@@ -28,7 +27,7 @@ export default StyleSheet.create({
         rightButtonText: {
           color: Colors.snow,
           textAlign: 'center',
-          textAlignVertical: 'center'
+          textAlignVertical: 'center',
         },
         rightButton: {
           top: 20,

@@ -1,14 +1,14 @@
 // @flow
 
 import React, { Component } from 'react'
-import { AppRegistry, Navigator, StyleSheet, Text, View} from 'react-native'
+import { AppRegistry, Navigator, StyleSheet, Text, View, Image } from 'react-native'
 import { Scene, Router, Actions } from 'react-native-router-flux'
+import Icon from 'react-native-vector-icons/FontAwesome'
 import Styles from './Styles/TabBarStyle'
-import { Metrics, Colors, Fonts } from '../Themes/'
+import { Metrics, Colors, Fonts, Images } from '../Themes/'
 import NavigationDrawer from './NavigationDrawer'
 import NavItems from './NavItems'
 import CustomNavBar from '../Navigation/CustomNavBar'
-import { Images } from '../Themes'
 
 // screens identified by the router
 import PresentationScreen from '../Containers/PresentationScreen'
@@ -32,9 +32,14 @@ import Helio1 from '../Containers/Helio1'
 class TabIcon extends React.Component {
     render(){
         return (
-
+          //should eventually be relocated into its own TabBar Style
+          <View style={Styles.tabBarStyle}>
+            <Icon
+              name={this.props.tabIcon}
+              size={24}
+              color={this.props.selected ? Colors.helioRedSecondary : 'white'}
+            />
             <Text
-                //should eventually be relocated into its own TabBar Style
                 style={{
                   textAlign: 'center',
                   fontWeight: 'bold',
@@ -42,6 +47,7 @@ class TabIcon extends React.Component {
                 }}
              >{this.props.title}
             </Text>
+          </View>
         );
     }
 }
